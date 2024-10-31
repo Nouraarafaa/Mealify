@@ -1,0 +1,265 @@
+@media screen and (max-width: 1024px) {
+    .nav {
+        padding-block: 30px;
+        padding-inline: 70px;
+        position: relative;
+    }
+    .bars {
+        display: flex;
+        align-items: center;
+    }
+    .nav .nav-list ul {
+        gap: 30px;
+        position: absolute;
+        right: 0;
+        display: none;
+    }
+    .nav .fa-bars {
+        display: block;
+        cursor: pointer; 
+        position: absolute;
+        right: 5%;
+        font-size: 24px;
+    }
+    .nav .bars:hover::after {
+        content: "\58";
+        color: #90909F;
+        position: absolute;
+        right: 5%;
+        top: 10%;
+        font-size: 24px;
+        font-weight: 600;
+        cursor: pointer; 
+    }
+    /* Show the navigation list when hovering over the bars icon */
+    .bars:hover ul {
+        display: block;
+        width: 45%;
+        height: 100vh;
+        background-color: #FFFFFF;
+        padding-inline: 25px;
+        padding-block: 70px;
+        top: 0;
+        animation-name: move;
+        animation-duration: 0.3s;
+        animation-direction: alternate;
+        cursor: pointer;
+        box-shadow: 10px 10px 10px 5px;
+    }
+    @keyframes move {
+        0% {
+            width: 10%;
+        }
+        25% {
+            width: 20%;
+        }
+        50% {
+            width: 30%;
+        }
+        75% {
+            width: 40%;
+        }
+        100% {
+            width: 45%;
+        }
+    }
+    .nav-list ul li {
+        margin-bottom: 30px;
+    }
+    .nav .nav-list ul li .home::after,
+    .nav .nav-list ul li .chefs::after,
+    .nav .nav-list ul li .gallery::after,
+    .nav .nav-list ul li .contact::after {
+        display: none;
+    }
+    .nav-list ul a {
+        color: #90909F;
+        font-weight: 600;
+        transition: 0.2s;
+    }
+    .nav-list ul li a:hover {
+        color: black;
+    }
+    .nav .theme i {
+        font-size: 24px;
+        margin-right: 40px;
+    }
+    /*---------------------------*/
+    #home {
+        flex-direction: column-reverse;
+        padding-inline: 20px;
+    }
+    #home .left {
+        width: 70%;
+        text-align: center;
+    }
+    #home .right {
+        width: 75%;
+    }
+    #home .right img {
+        width: 100%;
+        padding-block: 50px;
+    }
+    #home button.book {
+        border-radius: 60px;
+    }
+    /*-----------------------------*/
+    #chefs .chefs-details{
+        flex-direction: column;
+        padding-inline: 120px;
+    } 
+    /*----------------------------------*/
+    #gallery{
+        padding-bottom: 30px;
+    }
+    #gallery .gallery-details{
+        padding-top: 30px;
+        display: flex;
+        flex-direction: column;
+        padding-inline: 80px;
+        justify-content: center;
+    }
+    #gallery .gallery-details div:nth-child(1):hover .title{
+        right: 28%;
+    }
+    #gallery .gallery-details div:nth-child(2):hover .title{
+        right: 15%;
+    }
+    #gallery .gallery-details div:nth-child(3):hover .title{
+        right: 27%;
+    }
+    #gallery .gallery-details div:nth-child(4):hover .title{
+        right: 28%;
+    }
+    #gallery .gallery-details div:nth-child(5):hover .title{
+        right: 15%;
+    }
+    #gallery .gallery-details div:nth-child(6):hover .title{
+        right: 2%;
+    }
+    #gallery .gallery-details div:nth-child(7):hover .title{
+        right: 28%;
+    }
+    /*----------------------------------*/
+    #contact .map iframe{
+        padding-inline: 50px;
+    }
+    #contact .location{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    #contact .location .details{
+        display: flex;
+        align-items: center;
+        width: 80%;
+    }
+    #contact .contact-us{
+        margin-inline: 15px;
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    #contact .contact-us form #name{
+        width: 100%;
+    }
+    #contact .contact-us form #email{
+        width: 100%;
+    }
+    /*---------------------------------------*/
+    .footer{
+        flex-direction: column;
+        padding-inline: 30px;
+    }
+    .footer .middle input{
+        width: 70%;
+    }
+    .footer .middle .links a{
+        padding-right: 15px;
+    }
+}
+    /* Media query for max-width 768px */
+    @media screen and (max-width: 768px) {
+        .nav {
+            padding-inline: 30px;
+        }
+        .bars:hover ul {
+            width: 70%; 
+            animation-name: move2;
+            animation-duration: 0.4s;
+        }
+        @keyframes move2 {
+            0% {
+                width: 15%;
+            }
+            25% {
+                width: 40%;
+            }
+            50% {
+                width: 50%;
+            }
+            75% {
+                width: 60%;
+            }
+            100% {
+                width: 70%;
+            }
+        }
+    .nav .theme i {
+        margin-right: 30px;
+    }
+    #home .left h2{
+        font-size: 50px;
+        }
+    #home button.video{
+        padding-top: 20px;
+    }
+    #home button.video::before{
+        top:19%;
+        left: 7%;
+    } 
+    #chefs .chefs-details{
+        padding-inline: 50px;
+    }
+    #chefs .chefs-details div p{
+        padding-inline: 20px;
+    }
+    /*--------------------------*/
+    #gallery {
+        padding-bottom: 30px;
+    }
+        #gallery .gallery-details .title h4{
+        font-size: 18px;
+    }
+    #gallery .gallery-details .title p{
+        font-size: 14px;
+    }
+    #gallery .gallery-details div:nth-child(1):hover .title{
+        right: 9%;
+    }
+    #gallery .gallery-details div:nth-child(3):hover .title{
+        right: 4%;
+    }
+    #gallery .gallery-details div:nth-child(4):hover .title{
+        right: 12%;
+    }
+    #gallery .gallery-details div:nth-child(5):hover .title{
+        top: 15%;
+        right: 5%;
+    }
+    #gallery .gallery-details div:nth-child(6):hover .title{
+        right: 2%;
+    }
+    #gallery .gallery-details div:nth-child(7):hover .title{
+        right: 10%;
+    }
+    /*----------------------------*/
+    .footer .middle .links{
+        gap: 10px;
+    }
+    .footer .middle .links a{
+        padding: 0;
+        padding-right: 2px;
+    }
+}
